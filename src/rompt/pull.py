@@ -9,7 +9,7 @@ def pull(
     branch: Optional[str],
     destination: str,
     api_token: Optional[str],
-    _env: str,
+    _env: Optional[str],
     _dry: bool,
 ):
     root_api = f"api-{_env}.aws.rompt.ai" if _env else "api.aws.rompt.ai"
