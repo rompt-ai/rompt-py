@@ -31,6 +31,11 @@ def pull(
         ),
     )
 
+    if not api_token:
+        raise Exception(
+            "You must provide an API token in your env or `--token`. You can get one from https://rompt.ai."
+        )
+
     response = requests.post(
         f"https://{root_api}/pull",
         json=(
